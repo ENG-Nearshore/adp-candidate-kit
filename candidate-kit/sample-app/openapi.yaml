@@ -1,0 +1,155 @@
+openapi: 3.0.3
+info:
+  title: Support Triage Service API
+  version: 1.2.0
+  description: HTTP API of the Larkspur Utilities support triage service.
+servers:
+  - url: http://localhost:8085
+security:
+  - apiToken: []
+paths:
+  /health:
+    get:
+      summary: Liveness check
+      security: []
+      responses:
+        "200":
+          description: Service is up
+  /tickets:
+    get:
+      summary: List triaged tickets
+      parameters:
+        - name: status
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [Open, In Progress, Resolved]
+      responses:
+        "200":
+          description: Triaged tickets
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/TriagedTicket"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+  /tickets/{ticketId}:
+    get:
+      summary: Get one triaged ticket
+      parameters:
+        - $ref: "#/components/parameters/TicketId"
+      responses:
+        "200":
+          description: Triaged ticket
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TriagedTicket"
+        "404":
+          description: Unknown ticket
+  /tickets/{ticketId}/reassign:
+    post:
+      summary: Move a ticket to another group (dispatch team)
+      parameters:
+        - $ref: "#/components/parameters/TicketId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [groupId]
+              properties:
+                groupId:
+                  type: string
+                  nullable: true
+      responses:
+        "200":
+          description: Ticket reassigned
+        "404":
+          description: Unknown ticket or group
+  /triage/run:
+    post:
+      summary: Import the ticket export, classify, group and escalate
+      responses:
+        "200":
+          description: Run summary
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  tickets: {type: integer}
+                  groups: {type: integer}
+                  ungrouped: {type: integer}
+                  escalated: {type: integer}
+  /groups:
+    get:
+      summary: List groups
+      responses:
+        "200":
+          description: Groups
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Group"
+  /groups/{groupId}:
+    get:
+      summary: Get one group with its tickets
+      parameters:
+        - name: groupId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Group
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Group"
+        "404":
+          description: Unknown group
+components:
+  securitySchemes:
+    apiToken:
+      type: apiKey
+      in: header
+      name: X-Api-Token
+  parameters:
+    TicketId:
+      name: ticketId
+      in: path
+      required: true
+      schema:
+        type: string
+        example: LU-1001
+  responses:
+    Unauthorized:
+      description: Missing or wrong X-Api-Token
+  schemas:
+    TriagedTicket:
+      type: object
+      properties:
+        id: {type: string}
+        title: {type: string}
+        priority: {type: string, enum: [Low, Normal, High, Critical]}
+        status: {type: string}
+        category: {type: string}
+        urgency: {type: string}
+        summary: {type: string}
+        groupId: {type: string, nullable: true}
+    Group:
+      type: object
+      properties:
+        id: {type: string}
+        label: {type: string}
+        ticketIds:
+          type: array
+          items: {type: string}
