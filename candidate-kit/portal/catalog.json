@@ -1,0 +1,31 @@
+{
+  "repositories": [
+    {
+      "id": "support-triage",
+      "name": "Support Triage Service",
+      "description": "Imports, classifies, groups and escalates support desk tickets.",
+      "language": "Python",
+      "owner": "Support Engineering",
+      "classification": "confidential",
+      "path": "../sample-app",
+      "docs": ["../reference-docs"]
+    },
+    {
+      "id": "outage-feed",
+      "name": "Outage Status Feed",
+      "description": "Publishes planned and unplanned outage notices for the public website.",
+      "language": "JavaScript",
+      "owner": "Customer Communications",
+      "classification": "public",
+      "path": "../outage-feed",
+      "docs": []
+    }
+  ],
+  "templates": [
+    {
+      "id": "architecture-overview",
+      "title": "Architecture and API overview",
+      "path": "../documentation-request.md"
+    }
+  ]
+}

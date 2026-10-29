@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "run-request.schema.json",
+  "title": "Documentation run request (portal -> engine)",
+  "type": "object",
+  "required": ["contract_version", "run_id", "created_at", "requested_by", "repository", "request", "limits"],
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {"const": "1.0"},
+    "run_id": {"type": "string"},
+    "created_at": {"type": "string"},
+    "requested_by": {"type": "string"},
+    "repository": {
+      "type": "object",
+      "required": ["id", "name", "path", "docs_paths", "classification", "language"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string"},
+        "name": {"type": "string"},
+        "path": {"type": "string"},
+        "docs_paths": {"type": "array", "items": {"type": "string"}},
+        "classification": {"enum": ["public", "internal", "confidential"]},
+        "language": {"type": "string"}
+      }
+    },
+    "request": {
+      "type": "object",
+      "required": ["template_id", "text"],
+      "additionalProperties": false,
+      "properties": {
+        "template_id": {"type": "string"},
+        "text": {"type": "string"}
+      }
+    },
+    "limits": {
+      "type": "object",
+      "required": ["max_cost_eur", "timeout_seconds"],
+      "additionalProperties": false,
+      "properties": {
+        "max_cost_eur": {"type": "number", "minimum": 0},
+        "timeout_seconds": {"type": "integer", "minimum": 1}
+      }
+    }
+  }
+}

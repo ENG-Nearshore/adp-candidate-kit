@@ -1,0 +1,6 @@
+[project]
+name = "larkspur-docportal"
+version = "0.3.0"
+description = "Larkspur internal documentation portal (engine not included)."
+requires-python = ">=3.10"
+dependencies = []

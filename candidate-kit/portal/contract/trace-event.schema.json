@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "trace-event.schema.json",
+  "title": "One line of trace.jsonl (engine -> portal)",
+  "type": "object",
+  "required": ["ts", "event"],
+  "properties": {
+    "ts": {"type": "string"},
+    "event": {"type": "string", "minLength": 1},
+    "agent": {"type": "string"},
+    "tool": {"type": "string"},
+    "detail": {}
+  }
+}
