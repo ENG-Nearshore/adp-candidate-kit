@@ -29,7 +29,7 @@ All data, names, hosts, and organizations in this kit are fictional.
 
 ## Where your PoC lives and how it connects
 
-Build your PoC in this repository next to `candidate-kit/` (your commits on top of the kit commit are your history).
+Build your PoC in this repository, in new top-level folder(s) of your choice (your commits on top of the kit commit are your history).
 
 The portal connects to an engine **only through its engine contract** (`portal/README.md`, "Engine contract"):
 

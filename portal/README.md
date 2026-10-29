@@ -19,12 +19,12 @@ With an engine:
 
 ```bash
 # macOS / Linux
-ENGINE_COMMAND="python ../my-engine/run.py" python -m docportal.main
+ENGINE_COMMAND="python my-engine/run.py" python -m docportal.main
 # Windows PowerShell
-$env:ENGINE_COMMAND = "python ..\my-engine\run.py"; python -m docportal.main
+$env:ENGINE_COMMAND = "python my-engine\run.py"; python -m docportal.main
 ```
 
-The engine runs in `ENGINE_WORKDIR` (default: the kit root, `candidate-kit/`), so relative paths in `ENGINE_COMMAND` are resolved from there. In the examples, `../my-engine/` is a folder next to `candidate-kit/`.
+The engine runs in `ENGINE_WORKDIR` (default: the repository root), so relative paths in `ENGINE_COMMAND` are resolved from there. In the examples, `my-engine/` is a top-level folder of this repository.
 
 ## Tests
 
@@ -42,11 +42,11 @@ python -m unittest discover -s tests -t .
 | `PORTAL_CATALOG` | `catalog.json` | Repository and template catalog |
 | `PORTAL_RUNS_DIR` | `runs` | Where run folders are written |
 | `ENGINE_COMMAND` | unset | Command that starts the documentation engine |
-| `ENGINE_WORKDIR` | kit root (parent of `portal/`) | Working directory for the engine process |
+| `ENGINE_WORKDIR` | repository root (parent of `portal/`) | Working directory for the engine process |
 | `ENGINE_TIMEOUT_SECONDS` | `600` | Run is marked `timed_out` after this |
 | `PORTAL_MAX_COST_EUR` | `0.50` | Value passed to the engine as `limits.max_cost_eur` |
 
-Relative paths are resolved against `portal/`, except `ENGINE_WORKDIR`, which is resolved against the kit root.
+Relative paths are resolved against `portal/`, except `ENGINE_WORKDIR`, which is resolved against the repository root.
 
 ## Catalog
 
