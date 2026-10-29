@@ -1,0 +1,6 @@
+[project]
+name = "support-triage-service"
+version = "1.4.0"
+description = "Imports, classifies, groups and escalates Larkspur Utilities support tickets."
+requires-python = ">=3.10"
+dependencies = []

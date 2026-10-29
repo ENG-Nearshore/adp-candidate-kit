@@ -1,0 +1,31 @@
+id,title,description,priority,status,opened_on,customer_area
+LU-1001,Password reset email not received,Customer requested a password reset on the customer portal but the reset email never arrived in the inbox.,Normal,Open,2026-09-14,Residential
+LU-1002,Smart meter readings not updating,Smart meter readings shown in the customer portal have not updated for two weeks.,Normal,Open,2026-09-15,Residential
+LU-1003,Charged twice on monthly invoice,The monthly invoice shows the same standing charge twice for the billing period.,High,Open,2026-09-15,Residential
+LU-1004,Request to change tariff,Customer wants to move from the fixed tariff to the time-of-use tariff starting next month.,Low,Resolved,2026-09-16,Residential
+LU-1005,Password reset email not received,Customer requested a password reset on the customer portal but the reset email never arrived in the inbox or spam folder.,Normal,In Progress,2026-09-17,Business
+LU-1006,Direct debit date change,Business customer asks to move the direct debit collection date to the 15th of each month.,Low,Open,2026-09-18,Business
+LU-1007,Outage map not loading,The public outage map does not load and customers cannot see estimated restoration times in their area.,Critical,Open,2026-10-02,Residential
+LU-1008,Moving house final reading,Customer is moving house and needs a final reading appointment before the end of the month.,Normal,Resolved,2026-09-19,Residential
+LU-1009,Smart meter readings not updating,Smart meter readings shown in the customer portal have not updated for three weeks.,Normal,Open,2026-09-21,Residential
+LU-1010,Paperless billing opt in,Customer would like to stop paper statements and receive invoices by email only.,Low,Resolved,2026-09-22,Residential
+LU-1011,Street light flickering,Street light outside number 12 on Mill Lane has been flickering every night.,Low,Open,2026-09-22,Municipal
+LU-1012,Password reset email never received,Customer requested a password reset on the customer portal and the reset email never arrived in the inbox.,Normal,Open,2026-09-23,Residential
+LU-1013,Estimated bill too high,Customer believes the estimated bill is far above normal usage and asks for a review.,High,In Progress,2026-09-24,Residential
+LU-1014,Charged twice on monthly invoice,The monthly invoice shows the same standing charge twice for the current billing period.,High,In Progress,2026-09-25,Business
+LU-1015,Outage map not loading,The public outage map does not load and customers cannot see estimated restoration times for their area.,Critical,In Progress,2026-10-03,Municipal
+LU-1016,Smart meter readings not updating,Smart meter readings shown in the customer portal have not updated for two weeks after the firmware update.,Normal,Open,2026-09-26,Residential
+LU-1017,Solar export payment missing,Customer with rooftop panels has not received the export payment for August.,High,Open,2026-09-28,Residential
+LU-1018,Account holder name change,Customer asks to update the account holder name after marriage.,Low,Resolved,2026-09-29,Residential
+LU-1019,Substation alarm feed offline,Alarm feed from the north substation stopped reporting to the control room dashboard.,Critical,Resolved,2026-09-30,Municipal
+LU-1020,Outage map not loading,The public outage map does not load and customers cannot see estimated restoration times.,Normal,Resolved,2026-10-01,Residential
+LU-1021,Charged twice on monthly invoice,The monthly invoice shows the same standing charge twice for this billing period.,High,Open,2026-10-04,Residential
+LU-1022,Business portal locked account,Business user locked out after three failed login attempts and cannot unlock the account.,High,Open,2026-10-05,Business
+LU-1023,Hospital supply priority register,Regional hospital asks to confirm it is on the priority supply register before planned maintenance.,Critical,Open,2026-10-06,Municipal
+LU-1024,Meter cupboard key lost,Field engineer reports the meter cupboard key for block C is missing.,Normal,Open,2026-10-07,Business
+LU-1025,Refund for overpayment,Customer overpaid the last invoice and requests a refund to their bank account.,Normal,In Progress,2026-10-08,Residential
+LU-1026,Password reset email not received,Requested a password reset on the customer portal but the reset email never arrived in the inbox.,Normal,Open,2026-10-09,Residential
+LU-1027,Smart meter readings not updating,Smart meter readings shown in the customer portal have not updated for a month.,Normal,Open,2026-10-12,Business
+LU-1028,Voltage dips in evening,Several customers on Oak Road report lights dimming between 18:00 and 20:00.,High,Open,2026-10-13,Residential
+LU-1029,Request copy of contract,Business customer requests a copy of the signed supply contract.,Low,Resolved,2026-10-14,Business
+LU-1030,New connection quote,Developer requests a quote for connecting 14 new homes on the Elm Park site.,Normal,Open,2026-10-15,Business
