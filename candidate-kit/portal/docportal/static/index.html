@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Larkspur Documentation Portal</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>Larkspur Documentation Portal</h1>
+    <span id="engine-status" class="badge">checking engine...</span>
+  </header>
+  <main>
+    <section id="new-run">
+      <h2>New documentation run</h2>
+      <label>Repository <select id="repo"></select></label>
+      <p id="repo-info" class="muted"></p>
+      <label>Template <select id="template"></select></label>
+      <label>Request <textarea id="request" rows="10"></textarea></label>
+      <label>Requested by <input id="requested-by" value="architecture-team"></label>
+      <button id="start">Start run</button>
+      <p id="start-message" class="muted"></p>
+    </section>
+    <section id="runs">
+      <h2>Runs</h2>
+      <table>
+        <thead><tr><th>Run</th><th>Repository</th><th>Status</th><th>Created</th></tr></thead>
+        <tbody id="run-rows"></tbody>
+      </table>
+    </section>
+    <section id="run-detail" hidden>
+      <h2 id="detail-title"></h2>
+      <div id="detail-status"></div>
+      <ul id="detail-errors" class="errors"></ul>
+      <ul id="detail-warnings" class="warnings"></ul>
+      <div id="conclusion"></div>
+      <h3>Usage</h3>
+      <pre id="usage" class="muted">-</pre>
+      <h3>Trace</h3>
+      <table>
+        <thead><tr><th>Time</th><th>Agent</th><th>Event</th><th>Tool</th><th>Detail</th></tr></thead>
+        <tbody id="trace-rows"></tbody>
+      </table>
+    </section>
+    <section id="evidence" hidden>
+      <h2 id="evidence-title"></h2>
+      <pre id="evidence-body"></pre>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
