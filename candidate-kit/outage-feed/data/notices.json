@@ -1,0 +1,47 @@
+[
+  {
+    "id": "OUT-1042",
+    "kind": "planned",
+    "region": "north",
+    "title": "Water main replacement on Harbour Road",
+    "message": "Water supply interrupted between 09:00 and 15:00 for homes on Harbour Road.",
+    "start": "2025-11-04T09:00:00Z",
+    "end": "2025-11-04T15:00:00Z"
+  },
+  {
+    "id": "OUT-1043",
+    "kind": "unplanned",
+    "region": "east",
+    "title": "Power outage in Millbrook",
+    "message": "Crews are on site. We will update this notice when supply is restored.",
+    "start": "2025-11-04T07:40:00Z",
+    "end": null
+  },
+  {
+    "id": "OUT-1044",
+    "kind": "planned",
+    "region": "east",
+    "title": "Substation maintenance",
+    "message": "Short interruptions possible between 22:00 and 02:00.",
+    "start": "2025-11-05T22:00:00Z",
+    "end": "2025-11-06T02:00:00Z"
+  },
+  {
+    "id": "OUT-1039",
+    "kind": "unplanned",
+    "region": "south",
+    "title": "Gas pressure drop in Fenwick",
+    "message": "Supply restored. Thank you for your patience.",
+    "start": "2025-11-02T13:10:00Z",
+    "end": "2025-11-02T18:30:00Z"
+  },
+  {
+    "id": "OUT-1045",
+    "kind": "planned",
+    "region": "west",
+    "title": "Meter upgrades in Oakfield",
+    "message": "Each home will be without power for up to 30 minutes during the upgrade.",
+    "start": "2025-11-04T08:00:00Z",
+    "end": "2025-11-07T17:00:00Z"
+  }
+]
